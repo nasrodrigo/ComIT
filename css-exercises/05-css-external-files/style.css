@@ -1,0 +1,31 @@
+header {
+    text-align: center;
+}
+
+a {
+    color: red;
+}
+
+a:hover {
+    color: #00aced;
+}
+
+a:active {
+    color: #00aced;
+}
+
+.home a.lk-hm:visited {
+    color: #00aced;
+}
+
+.about a.lk-ab:visited {
+    color: #00aced;
+}
+
+.news a.lk-nw:visited {
+    color: #00aced;
+}
+
+p {
+    font-size: 18px;
+}
