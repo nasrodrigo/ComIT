@@ -5,6 +5,10 @@ body{
     color: #e6f7ff;
 }
 
+*{
+    font-family: sans-serif;
+}
+
 header {
     display: flex;
     flex-direction: column;
