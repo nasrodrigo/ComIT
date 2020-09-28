@@ -1,0 +1,89 @@
+html, body {
+    height: 99%;
+    width: 99%;
+}
+
+.page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+}
+
+header .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img {
+    border-radius: 250px;
+}
+
+header nav a {
+    padding: 5px;
+    margin: 5px;
+    color: #404040;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #cccccc;
+}
+
+header nav a:active {
+    color: #808080;
+}
+
+.home nav a.lk-hm:visited {
+    color: #808080;
+}
+
+.about nav a.lk-ab:visited {
+    color: #808080;
+}
+
+.contact nav a.lk-ct:visited {
+    color: #808080;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+main .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+main .content .form-contact div {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+} 
+
+main .content .form-contact input, textarea {
+    width: 250px;
+    border: none;
+    border-bottom: 1px #404040 solid;
+    
+}
+
+main .content .form-contact label{
+    width: 80px;
+}
+
+main .content .form-contact button.btn-flex{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    
+}
