@@ -1,34 +1,32 @@
 "use strict"
 
-let arr = [];
-let arr2 = [];
-let arr3 = [];
-let arr4 = [];
-
+let sum = 0;
 for(let i = 0; i <= 1000; i++){
-    if(i <= 400){
-        arr.push(i);
-        console.log(arr.join(','));
-    }else{
+    sum += i;
+    if( sum > 400){
+        console.log("Partial result: " + sum);
         break;
     }
 }
 
 for(let i = 0; i <= 10; i++){
-    arr2.push(i);
-    console.log(arr2.join(','));
+    console.log(i);
 }
 
 let i = 100;
 do{
-    arr3.push(i);
-    console.log(arr3.join(','));
+    console.log(i);
     i--;
 }while(i>0);
 
 let x = 1;
 while(x < 100){
-    arr4.push(x);
-    console.log(arr4.join(','));
+    console.log(x);
     x++;
+}
+
+let star = '';
+for(let i = 0; i < 13; i++){
+    star = star + '*';
+    console.log(star);    
 }
