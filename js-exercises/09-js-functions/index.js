@@ -25,21 +25,17 @@ function showUser(){
 
 showUser();
 
-let evenNumbers = evenCount();
+let evenNumbers = evenCount;
 
-let showName = function(){
-    console.log("=================");
-    console.log(`=    ${user.name}    =`);
-    console.log("=================");
+for(let i = 0; i < 5; i++){
+    evenNumbers();
 }
-
-showName();
 
 let fibonacci =  function(val) {
     let fib = 0;
     let x = 1;
     let y;
-        
+    
     for (let i = 0; i < val; i++) {
         if(i == 0) {
             console.log(0);
@@ -50,7 +46,16 @@ let fibonacci =  function(val) {
             console.log(fib);
         }
     }
-
+    
 }
 
 fibonacci(10);
+
+let showName = function(){
+    console.log("=================");
+    console.log(`=    ${user.name}    =`);
+    console.log("=================");
+}
+
+showName();
+showName();
