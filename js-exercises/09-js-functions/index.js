@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 let user = {
     name : "Rodrigo",
@@ -51,11 +51,15 @@ let fibonacci =  function(val) {
 
 fibonacci(10);
 
-let showName = function(){
-    console.log("=================");
-    console.log(`=    ${user.name}    =`);
-    console.log("=================");
+let showName = function(name){
+    let sign = "";
+    for (let index = 0; index < name.length + 6; index++) {
+        sign += "=";
+    }
+    console.log(sign);
+    console.log(`=  ${name}  =`);
+    console.log(sign);
 }
 
-showName();
-showName();
+showName("Rodrigo");
+showName("Sofia");
