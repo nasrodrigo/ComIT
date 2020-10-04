@@ -1,3 +1,5 @@
+"use strict";
+
 let user = {
     name : "Batman",
     password : "hunter2",
