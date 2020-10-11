@@ -4,19 +4,10 @@ body {
     height: 100%;
     margin: 0;
     overflow: hidden;
-    background-color: #535252;
+    background-color: #5c94fc;
 }
 
-img.photo { 
-    position: relative;
-    border-radius: 250px;
-    margin: 20px;
-    width: 150px;
-    animation-name: photoMove;
-    animation-duration: 2s;
-}
-
-h1.brand {
+.content h1 {
     position: relative;
     font-size: 70px;
     color: #4dff00;
@@ -35,21 +26,32 @@ h1.brand {
                 11px 11px 10px rgba(0,0,0,0.9),
                 11px 11px 1px rgba(0,0,0,0.5),
                 0px 0px 10px rgba(0,0,0,.2);
-    animation-name: brnadMove;
+    animation-name: titleMove;
     animation-duration: 2s;
 }
 
-.menu{
+.menu {
+    position: relative;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation-name: menuMove;
+    animation-duration: 2s;
 }
 
-.menu a {
+.menu-item {
     position: relative;
+    padding: 20px;
+}
+
+.menu-item:hover {
+    animation-name: menuMoveItem;
+    animation-duration: 2s;
+}
+
+.menu-item a {
     text-decoration: none;
-    margin: 20px;
     font-size: 50px;
     color: #f2e71b;
     font-family: 'Press Start 2P', cursive;
@@ -67,50 +69,153 @@ h1.brand {
                 11px 11px 10px rgba(0,0,0,0.6),
                 11px 11px 1px rgba(0,0,0,0.5),
                 0px 0px 10px rgba(0,0,0,.2);
-    animation-name: menuMove;
-    animation-duration: 2s;
 }
 
-.menu a:hover{
-    transform: rotate(-15deg);
+footer{
+    width: 100%;
 }
 
-.menu a:active{
-    transform: rotate(-15deg);
-    color: #f2b11b;
-    text-shadow: 0px 0px 0 rgb(233,168,18),
-                 1px 1px 0 rgb(224,159,9),
-                 2px 2px 0 rgb(215,150,0),
-                 3px 3px 0 rgb(206,141,-9),
-                 4px 4px 0 rgb(197,132,-18),
-                 5px 5px 0 rgb(188,123,-27),
-                 6px 6px 0 rgb(179,114,-36),
-                 7px 7px 0 rgb(170,105,-45),
-                 8px 8px 0 rgb(161,96,-54),
-                 9px 9px 0 rgb(152,87,-63),
-                 10px 10px  0 rgb(143,78,-72),
-                 11px 11px 10px rgba(0,0,0,0.9),
-                 11px 11px 1px rgba(0,0,0,0.5),
-                 0px 0px 10px rgba(0,0,0,.2);
+.mushroom-animation {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    bottom: 28px;
+    margin-left: 50px;
 }
 
-@keyframes photoMove {
-    0%   {opacity:0; left:100px; top:50px;}
-    50%  {opacity: 0.5; left:0px; top:0px;}
-    100%  {opacity:1; left:0px; top:0px;}
+.mushroom {
+    background: url(../images/mushroom.png) no-repeat;
+    background-size: 34px auto;
+    width: 34px;
 }
 
-@keyframes brnadMove {
-    0%   {opacity:0; left:0px; top:-50px;}
-    50%  {opacity: 0.5; left:0px; top:0px;}
-    100%  {opacity:1; left:0px; top:0px;}
+.brick {
+    background: url(../images/brick.png) no-repeat;
+    background-size: 34px auto;
+    width: 34px;
+    
+}
+
+.three-blocks {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    bottom: 28px;
+    margin-left: 50px;
+}
+
+.block-hit {
+    position: relative;
+    background: url(../images/block-hit.png) no-repeat;
+    background-size: 34px auto;
+    width: 34px;
+    animation: blockHitAnimation 2s;
+}
+
+.block {
+    position: relative;
+    background: url(../images/block1.png) no-repeat;
+    background-size: 34px auto;
+    width: 34px;
+    animation: blockAnimation 2s infinite;
+   
+}
+
+.footer-animation {
+    position: relative;
+    animation-name: footerAnimation;
+    animation-duration: 30s;
+}
+
+.mario-run {
+    position: relative;
+    background: url(../images/mario1.png) no-repeat;
+    background-size: 34px auto;
+    width: 34px;
+    height: 66px;
+    animation: marioRun 2s infinite;
+}
+
+.mario-jump {
+    position: relative;
+    background: url(../images/mario2.png) no-repeat;
+    background-size: 34px auto;
+    width: 34px;
+    height: 66px;
+    animation: marioJump 2s;
+}
+
+@keyframes titleMove {
+    0% {opacity:0; left:0px; top:-50px;}
+    25% {opacity:0.25; left:0px; top:0px;}
+    50% {opacity: 0.5; left:0px; top:0px;}
+    100% {opacity:1; left:0px; top:0px;}
 }
 
 @keyframes menuMove {
-    0%   {opacity:0; left:-50px; top:100px;}
-    50%  {opacity: 0.5; left:0px; top:0px;}
-    100%  {opacity:1; left:0px; top:0px;}
+    0% {opacity:0; left:-50px; top:100px;}
+    25% {opacity:0.25; left:0px; top:0px;}
+    50% {opacity: 0.5; left:0px; top:0px;}
+    100% {opacity:1; left:0px; top:0px;}
 }
 
+@keyframes menuMoveItem {
+    50% {transform: rotate(-15deg)}
+}
+
+@keyframes mushroomAnimation {
+    from {opacity: 0; height: 200px;}
+    to {opacity: 1; height: 235px;}
+}
+
+@keyframes blockHitAnimation {
+    0% {background: url(../images/block1.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
+    50% {background: url(../images/block3.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
+    100% {background: url(../images/block-hit.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
+}
+
+@keyframes blockAnimation {
+    from {background: url(../images/block1.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
+    to {background: url(../images/block3.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
+}
+
+@keyframes footerAnimation {
+    0% {left:-10%; top:0px;}
+    50% {left:50%; top:0px;}
+    100% {left:110%; top:0px;}
+}
+
+@keyframes marioRun {
+    0% {background: url(../images/mario2.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
+    25% {background: url(../images/mario3.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
+    50% {background: url(../images/mario4.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
+    75% {background: url(../images/mario3.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
+    100% {background: url(../images/mario2.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
+}
+
+@keyframes marioJump {
+    0% {background: url(../images/mario2.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
+    25% {background: url(../images/mario5.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
+    50% {background: url(../images/mario6.png) no-repeat; background-size: 34px auto; width: 34px; height: 200px;}
+    75% {background: url(../images/mario7.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
+    100% {background: url(../images/mario2.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
+}
+
+@media only screen and (max-width: 400px) {
+    .content h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .menu-item a {
+        font-size: 30px;
+    }
+}
 
  

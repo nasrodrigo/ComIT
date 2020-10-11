@@ -1,28 +1,55 @@
-let img = document.createElement('img');
-img.src = "images/FB_IMG_1426357700818.jpg";
-img.alt = "Rodrigo Monteiro";
-img.className = "photo";
-img.id = "image";
+"use strict";
 
-let imgOver = document.createElement('img');
-imgOver.src = "images/IMG-20200920-WA0013.jpg";
-imgOver.alt = "Rodrigo Monteiro";
-imgOver.className = "photo";
-imgOver.id = "imageOver";
+const RUN = 1;
+const JUMP = 2;
 
-window.onload = function(){
-    document.getElementById("ft").onmouseover = function() {
-        if(document.getElementById("image")){
-            document.getElementById("ft").removeChild(document.getElementById("image"));
+let superMarioBros = {
+    mario : document.getElementById("mariobros"),
+    marioAction : (mario, action) => {
+        if(action == 1)/* RUN */{
+            return mario.className = "mario-run";
+        }else if(action == 2)/* JUMP */{
+            return mario.className = "mario-jump";
         }
-        document.getElementById("ft").appendChild(imgOver);
-        
-    };
+    },
+    marioPositionX : (mario) => {
+        return +mario.getBoundingClientRect().x.toFixed(0);
+    }
 
-    document.getElementById("ft").onmouseout = function() {
-        if(document.getElementById("imageOver")){
-            document.getElementById("ft").removeChild(document.getElementById("imageOver"));
-        }
-        document.getElementById("ft").appendChild(img);
-    };
 };
+
+let stageActions = () => {
+    let mario = superMarioBros.mario;
+    let marioXAxis = superMarioBros.marioPositionX(mario);
+    let stageWidth = +document.body.clientWidth;
+    let middleOfStage = (stageWidth / 2).toFixed(0);
+    
+    if(marioXAxis == middleOfStage || marioXAxis > middleOfStage - 5 && marioXAxis < middleOfStage){
+        superMarioBros.marioAction(mario, JUMP);
+        bockHit();
+        mushroomAnimation();
+    }else if(marioXAxis > stageWidth){
+        stopInterval();
+    }else{
+        superMarioBros.marioAction(mario, RUN);
+    }    
+};
+
+let bockHit = () => {
+    let block = document.getElementById("block");
+    block.className = "block-hit";
+};
+
+let mushroomAnimation = () => {
+    let mushroom = document.getElementById("mushroom");
+    mushroom.style.animation = "mushroomAnimation 5s";
+    mushroom.style.height = "235px";
+};
+
+let interval = window.setInterval(stageActions, 2000);
+
+let stopInterval = () => {
+    window.clearInterval(interval);
+};
+
+   
