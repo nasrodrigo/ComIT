@@ -1,28 +1,37 @@
-let img = document.createElement('img');
-img.src = "images/FB_IMG_1426357700818.jpg";
-img.alt = "Rodrigo Monteiro";
-img.className = "photo";
-img.id = "image";
+"use strict";
 
-let imgOver = document.createElement('img');
-imgOver.src = "images/IMG-20200920-WA0013.jpg";
-imgOver.alt = "Rodrigo Monteiro";
-imgOver.className = "photo";
-imgOver.id = "imageOver";
+let getMiddleOfStage = () => {
+    let mario = document.getElementById("mariobros");
+    let marioXAxis = +mario.getBoundingClientRect().x.toFixed(0);
+    let middleOfStage = +(document.body.clientWidth / 2).toFixed(0);
+    let stageWidth = document.body.clientWidth;
 
-window.onload = function(){
-    document.getElementById("ft").onmouseover = function() {
-        if(document.getElementById("image")){
-            document.getElementById("ft").removeChild(document.getElementById("image"));
-        }
-        document.getElementById("ft").appendChild(imgOver);
-        
-    };
-
-    document.getElementById("ft").onmouseout = function() {
-        if(document.getElementById("imageOver")){
-            document.getElementById("ft").removeChild(document.getElementById("imageOver"));
-        }
-        document.getElementById("ft").appendChild(img);
-    };
+    if(marioXAxis == middleOfStage || marioXAxis > middleOfStage - 5 && marioXAxis < middleOfStage){
+        mario.className = "mario-jump";
+        bockHit();
+        mushroomAnimation();
+    }else if(marioXAxis > stageWidth){
+        stopInterval();
+    }else{
+        mario.className = "mario-run";
+    }    
 };
+
+let bockHit = () => {
+    let block = document.getElementById("block");
+    block.className = "block-hit";
+};
+
+let mushroomAnimation = () => {
+    let mushroom = document.getElementById("mushroom");
+    mushroom.style.animation = "mushroomAnimation 5s";
+    mushroom.style.height = "235px";
+};
+
+let interval = window.setInterval(getMiddleOfStage, 2000);
+
+let stopInterval = () => {
+    window.clearInterval(interval);
+};
+
+   
