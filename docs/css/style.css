@@ -14,7 +14,7 @@ header {
     width: 100%;
 }
 
-header .content{
+header .content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,36 +54,68 @@ header nav a:active {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     flex: 1 0 auto;
+    margin: 60px;
 }
 
-main .content{
+main .content {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: justify;
 }
 
-main .content .form-contact div {
-    margin-top: 25px;
+main .content .form-contact {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .content .form-contact div {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
     flex-direction: row;
+    justify-content: space-between;
+    width: 400px;
 } 
 
 main .content .form-contact input, textarea {
     width: 250px;
-    border: none;
-    border-bottom: 1px #404040 solid;
-    
+    padding: 10px;
+    background-color:#f2e71b;
+    border: 1px #3a3358 solid;
+    border-radius: 15px;
 }
 
-main .content .form-contact label{
+main .content .form-contact label {
     width: 80px;
 }
 
-main .content .form-contact button.btn-flex{
-    margin-top: 25px;
+main .content .form-contact button.btn-flex {
     display: flex;
     flex-direction: row;
-    
+    justify-content: center;
+    background: #f2e71b;
+    margin-top: 25px;
+    width: 100px;
+    border: 2px #3a3358 solid;
+    border-radius: 15px;
+}
+
+main .content .form-contact button.btn-flex:hover {
+    background: none;
+    border: 2px #3a3358 solid;
+}
+
+@media only screen and (max-width: 600px) {
+    main .content .form-contact input, textarea {
+        width: 150px;
+    }
+    main .content .form-contact div {
+        width: 300px;
+    }
 }

@@ -1,0 +1,16 @@
+@keyframes headerMove {
+    from {opacity:0; left:0px; top:-100px;}
+    to{opacity: 1; left:0px; top:0px;}
+}
+
+@keyframes contentMove {
+    from {opacity: 0; left:-50px; top:100px;}
+    to{opacity: 1; left:0px; top:0px;}
+}
+
+@keyframes footerMove {
+    from {opacity: 0; bottom: -100px;}
+    to{opacity: 1; bottom: 0;}
+}
+
+
