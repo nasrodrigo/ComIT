@@ -1,0 +1,43 @@
+.blocks-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-left: 20px;
+    height: 32px;
+    bottom: 310px;
+}
+
+.brick {
+    background: url(../images/brick.png) no-repeat;
+    background-size: 32px auto;
+    width: 32px;
+}
+
+.block-hit {
+    position: relative;
+    background: url(../images/block-hit.png) no-repeat;
+    background-size: 32px auto;
+    width: 32px;
+    animation: blockHitAnimation 2s;
+}
+
+.block {
+    position: relative;
+    background: url(../images/block1.png) no-repeat;
+    background-size: 32px auto;
+    width: 32px;
+    animation: blockAnimation 2s infinite;
+}
+
+@keyframes blockHitAnimation {
+    0% {background: url(../images/block1.png) no-repeat; background-size: 32px auto; width: 32px;}
+    50% {background: url(../images/block3.png) no-repeat; background-size: 32px auto; width: 32px;}
+    100% {background: url(../images/block-hit.png) no-repeat; background-size: 32px auto; width: 32px;}
+}
+
+@keyframes blockAnimation {
+    from {background: url(../images/block1.png) no-repeat; background-size: 32px auto; width: 32px;}
+    to {background: url(../images/block3.png) no-repeat; background-size: 32px auto; width: 32px;}
+}

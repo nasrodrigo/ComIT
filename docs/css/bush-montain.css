@@ -1,0 +1,51 @@
+.bush-and-montain-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    bottom: 182px;
+}
+
+.bush-and-montain-combine {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.bush-S {
+    background: url(../images/bush1.png) no-repeat;
+    background-size: 64px auto;
+    width: 64px;
+    height: 32px;
+} 
+
+.bush-M {
+    background: url(../images/bush3.png) no-repeat;
+    background-size: 96px auto;
+    width: 96px;
+    height: 32px;
+} 
+
+.bush-L {
+    background: url(../images/bush2.png) no-repeat;
+    background-size: 128px auto;
+    width: 128px;
+    height: 32px;
+} 
+
+.montain-S {
+    background: url(../images/montain-small.png) no-repeat;
+    background-size: 96px auto;
+    width: 96px;
+    height: 38px;
+}
+
+.montain-L {
+    background: url(../images/montain-big.png) no-repeat;
+    background-size: 160px auto;
+    width: 160px;
+    height: 70px;
+}

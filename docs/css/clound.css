@@ -1,0 +1,37 @@
+.clounds-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    bottom: 250px;
+}
+
+.clound-face {
+    background: url(../images/clound-face.png) no-repeat;
+    background-size: 32px auto;
+    width: 32px;
+    height: 32px;
+}
+
+.clound-S {
+    background: url(../images/clound3.png) no-repeat;
+    background-size: 64px auto;
+    width: 64px;
+    height: 48px;
+}
+
+.clound-M {
+    background: url(../images/clound1.png) no-repeat;
+    background-size: 96px auto;
+    width: 96px;
+    height: 48px;
+}
+
+.clound-L {
+    background: url(../images/clound2.png) no-repeat;
+    background-size: 128px auto;
+    width: 128px;
+    height: 48px;
+}

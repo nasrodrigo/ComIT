@@ -43,7 +43,7 @@ let bockHit = () => {
 let mushroomAnimation = () => {
     let mushroom = document.getElementById("mushroom");
     mushroom.style.animation = "mushroomAnimation 5s";
-    mushroom.style.height = "235px";
+    mushroom.style.bottom = "310px";
 };
 
 let interval = window.setInterval(stageActions, 2000);

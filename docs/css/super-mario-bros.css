@@ -1,0 +1,48 @@
+.mario-container {
+    position: fixed;
+    display: flex;
+    align-items: flex-end;
+    animation-name: marioContainerAnimation;
+    animation-duration: 30s;
+    bottom: 32px;
+}
+
+.mario-run {
+    position: fixed;
+    background: url(../images/mario1.png) no-repeat;
+    background-size: 32px auto;
+    width: 32px;
+    height: 64px;
+    animation: marioRun 2s infinite;
+}
+
+.mario-jump {
+    position: fixed;
+    background: url(../images/mario2.png) no-repeat;
+    background-size: 32px auto;
+    width: 32px;
+    height: 64px;
+    animation: marioJump 2s;
+}
+
+@keyframes marioContainerAnimation {
+    0% {left:-10%; top:0px;}
+    50% {left:50%; top:0px;}
+    100% {left:110%; top:0px;}
+}
+
+@keyframes marioRun {
+    0% {background: url(../images/mario2.png) no-repeat; background-size: 32px auto; width: 32px; height: 64px;}
+    25% {background: url(../images/mario3.png) no-repeat; background-size: 32px auto; width: 32px; height: 64px;}
+    50% {background: url(../images/mario4.png) no-repeat; background-size: 32px auto; width: 32px; height: 64px;}
+    75% {background: url(../images/mario3.png) no-repeat; background-size: 32px auto; width: 32px; height: 64px;}
+    100% {background: url(../images/mario2.png) no-repeat; background-size: 32px auto; width: 32px; height: 64px;}
+}
+
+@keyframes marioJump {
+    0% {background: url(../images/mario2.png) no-repeat; background-size: 32px auto; width: 32px; height: 64px;}
+    25% {background: url(../images/mario5.png) no-repeat; background-size: 32px auto; width: 32px; height: 64px;}
+    50% {background: url(../images/mario6.png) no-repeat; background-size: 32px auto; width: 32px; height: 200px;}
+    75% {background: url(../images/mario7.png) no-repeat; background-size: 32px auto; width: 32px; height: 64px;}
+    100% {background: url(../images/mario2.png) no-repeat; background-size: 32px auto; width: 32px; height: 64px;}
+}

@@ -1,3 +1,9 @@
+@import url("./clound.css"); 
+@import url("./bush-montain.css"); 
+@import url("./block-brick.css"); 
+@import url("./mushroom.css"); 
+@import url("./super-mario-bros.css"); 
+
 html, 
 body {
     width:  100%;
@@ -73,82 +79,9 @@ body {
 
 footer{
     width: 100%;
-}
-
-.mushroom-animation {
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    height: 200px;
-    bottom: 28px;
-    margin-left: 50px;
-}
-
-.mushroom {
-    background: url(../images/mushroom.png) no-repeat;
-    background-size: 34px auto;
-    width: 34px;
-}
-
-.brick {
-    background: url(../images/brick.png) no-repeat;
-    background-size: 34px auto;
-    width: 34px;
-    
-}
-
-.three-blocks {
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    height: 200px;
-    bottom: 28px;
-    margin-left: 50px;
-}
-
-.block-hit {
-    position: relative;
-    background: url(../images/block-hit.png) no-repeat;
-    background-size: 34px auto;
-    width: 34px;
-    animation: blockHitAnimation 2s;
-}
-
-.block {
-    position: relative;
-    background: url(../images/block1.png) no-repeat;
-    background-size: 34px auto;
-    width: 34px;
-    animation: blockAnimation 2s infinite;
-   
-}
-
-.footer-animation {
-    position: relative;
-    animation-name: footerAnimation;
-    animation-duration: 30s;
-}
-
-.mario-run {
-    position: relative;
-    background: url(../images/mario1.png) no-repeat;
-    background-size: 34px auto;
-    width: 34px;
-    height: 66px;
-    animation: marioRun 2s infinite;
-}
-
-.mario-jump {
-    position: relative;
-    background: url(../images/mario2.png) no-repeat;
-    background-size: 34px auto;
-    width: 34px;
-    height: 66px;
-    animation: marioJump 2s;
+    background: url(../images/floor.png) repeat-x;
+    background-size: 32px auto;
+    height: 32px;
 }
 
 @keyframes titleMove {
@@ -169,53 +102,35 @@ footer{
     50% {transform: rotate(-15deg)}
 }
 
-@keyframes mushroomAnimation {
-    from {opacity: 0; height: 200px;}
-    to {opacity: 1; height: 235px;}
-}
-
-@keyframes blockHitAnimation {
-    0% {background: url(../images/block1.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
-    50% {background: url(../images/block3.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
-    100% {background: url(../images/block-hit.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
-}
-
-@keyframes blockAnimation {
-    from {background: url(../images/block1.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
-    to {background: url(../images/block3.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
-}
-
-@keyframes footerAnimation {
-    0% {left:-10%; top:0px;}
-    50% {left:50%; top:0px;}
-    100% {left:110%; top:0px;}
-}
-
-@keyframes marioRun {
-    0% {background: url(../images/mario2.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
-    25% {background: url(../images/mario3.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
-    50% {background: url(../images/mario4.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
-    75% {background: url(../images/mario3.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
-    100% {background: url(../images/mario2.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
-}
-
-@keyframes marioJump {
-    0% {background: url(../images/mario2.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
-    25% {background: url(../images/mario5.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
-    50% {background: url(../images/mario6.png) no-repeat; background-size: 34px auto; width: 34px; height: 200px;}
-    75% {background: url(../images/mario7.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
-    100% {background: url(../images/mario2.png) no-repeat; background-size: 34px auto; width: 34px; height: 66px;}
-}
-
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
     .content h1 {
-        font-size: 35px;
+        font-size: 30px;
         text-align: center;
     }
 
     .menu-item a {
-        font-size: 30px;
+        font-size: 25px;
+    }
+
+    .clound-L {
+        display: none;
+        /* background-image: none; */
+    }
+
+    .clound-face {
+        display: none;
+        /* background-image: none; */
+    }
+
+    .bush-L {
+        display: none;
+    }
+
+    .bush-and-montain-combine {
+        display: none;
+    }
+
+    .bush-and-montain-container {
+        bottom: 150px;
     }
 }
-
- 
