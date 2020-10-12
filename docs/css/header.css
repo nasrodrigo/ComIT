@@ -1,0 +1,89 @@
+header h1 {
+    position: relative;
+    font-size: 70px;
+    text-align: center;
+    color: #4dff00;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 0px 0px 0 rgb(68,246,-9),
+                1px 1px 0 rgb(59,237,-18),
+                2px 2px 0 rgb(50,228,-27),
+                3px 3px 0 rgb(41,219,-36),
+                4px 4px 0 rgb(32,210,-45),
+                5px 5px 0 rgb(23,201,-54),
+                6px 6px 0 rgb(14,192,-63),
+                7px 7px 0 rgb(5,183,-72),
+                8px 8px 0 rgb(-4,174,-81),
+                9px 9px 0 rgb(-13,165,-90),
+                10px 10px  0 rgb(-22,156,-99),
+                11px 11px 10px rgba(0,0,0,0.9),
+                11px 11px 1px rgba(0,0,0,0.5),
+                0px 0px 10px rgba(0,0,0,.2);
+    animation-name: titleMove;
+    animation-duration: 2s;
+}
+
+header nav a {
+    text-decoration: none;
+    font-size: 24px;
+    text-align: center;
+    color: #f2e71b;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 0px 0px 0 rgb(233,222,18),
+                1px 1px 0 rgb(224,213,9),
+                2px 2px 0 rgb(215,204,0),
+                3px 3px 0 rgb(206,195,-9),
+                4px 4px 0 rgb(197,186,-18),
+                5px 5px 0 rgb(188,177,-27),
+                6px 6px 0 rgb(179,168,-36),
+                7px 7px 0 rgb(170,159,-45),
+                8px 8px 0 rgb(161,150,-54),
+                9px 9px 0 rgb(152,141,-63),
+                10px 10px  0 rgb(143,132,-72),
+                11px 11px 10px rgba(0,0,0,0.6),
+                11px 11px 1px rgba(0,0,0,0.5),
+                0px 0px 10px rgba(0,0,0,.2);
+}
+
+header nav a:hover {
+    color: #fcf56a;
+    text-shadow: 0px 0px 0 rgb(247,240,101),
+                 1px 1px 0 rgb(242,235,96),
+                 2px 2px 0 rgb(237,230,91),
+                 3px 3px 0 rgb(232,225,86),
+                 4px 4px 0 rgb(227,220,81),
+                 5px 5px 0 rgb(222,215,76),
+                 6px 6px 0 rgb(217,210,71),
+                 7px 7px 0 rgb(212,205,66),
+                 8px 8px 0 rgb(207,200,61),
+                 9px 9px 0 rgb(202,195,56),
+                 10px 10px  0 rgb(197,190,51),
+                 11px 11px 10px rgba(0,0,0,0.6),
+                 11px 11px 1px rgba(0,0,0,0.5),
+                 0px 0px 10px rgba(0,0,0,.2);
+}
+
+header nav a:active {
+    color: #e88e21;
+    text-shadow: 0px 0px 0 rgb(227,137,28),
+                 1px 1px 0 rgb(222,132,23),
+                 2px 2px 0 rgb(217,127,18),
+                 3px 3px 0 rgb(212,122,13),
+                 4px 4px 0 rgb(207,117,8),
+                 5px 5px 0 rgb(202,112,3),
+                 6px 6px 0 rgb(197,107,0),
+                 7px 7px 0 rgb(192,102,0),
+                 8px 8px 0 rgb(187,97,0),
+                 9px 9px 0 rgb(182,92,0),
+                 10px 10px  0 rgb(177,87,0),
+                 11px 11px 10px rgba(0,0,0,0.6),
+                 11px 11px 1px rgba(0,0,0,0.5),
+                 0px 0px 10px rgba(0,0,0,.2);
+}
+
+.about nav a.lk-ab:visited {
+    color: #e88e21;
+}
+
+.contact nav a.lk-ct:visited {
+    color: #e88e21;
+}
